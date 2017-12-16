@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Расчет половины и трети ночи</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="app">
+        <div class="form-wrapper">
+            <form @submit.prevent="calculate">
+                <input type="time" v-model="maghrib">
+                <input type="time" v-model="fajr"> <br>
+                <input type="submit" value="Рассчитать">
+            </form>
+        </div>
+        <div class="parts">
+            <div class="half">
+                <div class="start">{{ maghrib }}</div>
+                <div class="middle">{{ halfParts[1] }}</div>
+            </div>
+            <div class="half">
+                <!--<div class="start">{{ halfParts[1] }}</div>-->
+                <div class="end">{{ fajr }}</div>
+            </div>
+        </div>
+        <div class="parts">
+            <div class="third">
+                <div class="start">{{ maghrib }}</div>
+                <div class="middle">{{ thirdParts[1] }}</div>
+            </div>
+            <div class="third">
+                <div class="middle">{{ thirdParts[2] }}</div>
+            </div>
+            <div class="third">
+                <div class="end">{{ fajr }}</div>
+            </div>
+        </div>
+        <!--<ul>-->
+            <!--<li v-for="part in halfParts">{{ part }}</li>-->
+        <!--</ul>-->
+        <!--<ul>-->
+            <!--<li v-for="part in thirdParts">{{ part }}</li>-->
+        <!--</ul>-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.4/moment.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

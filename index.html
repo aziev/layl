@@ -8,10 +8,9 @@
 <body>
     <div id="app">
         <div class="form-wrapper">
-            <form @submit.prevent="calculate">
+            <form>
                 <input type="time" v-model="maghrib">
-                <input type="time" v-model="fajr"> <br>
-                <input type="submit" value="Рассчитать">
+                <input type="time" v-model="fajr">
             </form>
         </div>
         <div class="parts">

@@ -59,4 +59,12 @@ var app = new Vue({
     mounted() {
         this.calculate();
     },
+    watch: {
+        fajr() {
+            this.calculate();
+        },
+        maghrib() {
+            this.calculate();
+        },
+    },
 });

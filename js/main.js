@@ -35,7 +35,7 @@ var app = new Vue({
             return hours >= 24 ? hours - 24 : hours;
         },
         minutesToHours(minutes) {
-            let hours = Math.ceil(minutes / 60);
+            let hours = Math.floor(minutes / 60);
             return this.limitHoursByTwentyFour(hours);
         },
         minutesToMinutes(minutes) {
